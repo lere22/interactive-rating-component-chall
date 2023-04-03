@@ -81,7 +81,7 @@ body {
 }
 
 .card-text {
-	font-size: 0.85rem;
+	font-size: 0.89rem;
 	font-weight: var(--fw-400);
 	line-height: 1.7;
 	margin-bottom: 0.5rem;
@@ -160,7 +160,7 @@ input[type="radio"][name="rating"]:checked + label {
 }
 
 .card-text-thanks {
-	font-size: 0.85rem;
+	font-size: 0.89rem;
 	text-align: center;
 	line-height: 1.7;
 	margin-bottom: 0.5rem;
@@ -173,4 +173,10 @@ input[type="radio"][name="rating"]:checked + label {
 }
 .attribution a {
 	color: var(--primary);
+}
+
+@media (max-width: 990px) {
+	.card-text-thanks {
+		font-size: 0.85rem;
+	}
 }

@@ -4,28 +4,45 @@ const ratingStartCard = document.querySelector(".rating-start");
 const ratingThanksCard = document.querySelector(".rating-thanks");
 const submitBtn = document.getElementById("submit");
 const rateAgainBtn = document.getElementById("rate-again");
+const ratings = document.querySelectorAll('input[name="rating"]');
+const ratingSelected = document.querySelector(".rating-selection-number");
 
-// The procces
+// the procces
 const displayThanksCard = function () {
 	ratingStartCard.style.display = "none";
 	ratingThanksCard.style.display = "flex";
 };
 
+const getRating = function () {
+	let checkedRating = null;
+	ratings.forEach((rating) => {
+		if (rating.checked) {
+			checkedRating = rating.value;
+		}
+	});
+	if (checkedRating) {
+		ratingSelected.textContent = checkedRating;
+		displayThanksCard();
+	}
+};
+
 const displayStartCard = function () {
+	ratings.forEach((rating) => {
+		rating.checked = false;
+	});
 	ratingStartCard.style.display = "flex";
 	ratingThanksCard.style.display = "none";
 };
 
 const handleSubmit = function (e) {
 	e.preventDefault();
-	displayThanksCard();
+	getRating();
 };
 
-const handleReset = function (e) {
-	e.preventDefault();
+const handleReset = function () {
 	displayStartCard();
 };
 
-// Event listener
+// rvent listener
 form.addEventListener("submit", handleSubmit);
 rateAgainBtn.addEventListener("click", handleReset);
