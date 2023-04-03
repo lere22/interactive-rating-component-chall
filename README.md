@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-with-flexbox-A8qFQTPvrN)
 - Live Site URL: [Live site URL here](https://lere22.github.io/interactive-rating-component-chall/)
 
 ## My process
@@ -61,7 +61,7 @@ I want to continue this project to collaborate with my other projects in the fut
 
 ### Useful resources
 
-- [Fonts](https://fonts.google.com/specimen/Outfit) - This helped me for choosing the font what i want.
+- [Fonts](https://fonts.google.com/specimen/Overpass) - This helped me for choosing the font what i want.
 - [Frontend Mentor Resource](https://www.frontendmentor.io/resources) - This is an amazing resource which helped me to working on frontend project.
 - [CSS Gradient](https://cssgradient.io/) - This is an amazing tool to create gradient color for designing an app.
 - [W3 Schools](https://www.w3schools.com/) - This helped me for understanding the syntax of some programming language.
