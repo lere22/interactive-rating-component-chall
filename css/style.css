@@ -43,15 +43,6 @@ body {
 	gap: 1rem;
 }
 
-input[type="radio"][name="rating"] {
-	display: none;
-}
-
-input[type="radio"][name="rating"]:checked + label {
-	background-color: var(--primary);
-	color: var(--white);
-}
-
 .circle {
 	background-color: var(--dark-blue);
 	width: 3rem;
@@ -75,25 +66,34 @@ input[type="radio"][name="rating"]:checked + label {
 .rating-start {
 	display: flex;
 	flex-direction: column;
-	gap: 1.6rem;
+	gap: 1.3rem;
 }
 
 .star-icon {
-	margin-bottom: 2rem;
+	margin-bottom: 0.7rem;
 }
 
-.card-body h1 {
+.card-title {
 	font-size: 1.7rem;
 	font-weight: var(--fw-700);
 	color: var(--white);
-	margin-bottom: 0.5rem;
+	margin-bottom: -0.5rem;
 }
 
-.card-body p {
+.card-text {
 	font-size: 0.85rem;
 	font-weight: var(--fw-400);
 	line-height: 1.7;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+input[type="radio"][name="rating"] {
+	display: none;
+}
+
+input[type="radio"][name="rating"]:checked + label {
+	background-color: var(--primary);
+	color: var(--white);
 }
 
 .rating-buttons {
@@ -134,6 +134,36 @@ input[type="radio"][name="rating"]:checked + label {
 /* Thank you state */
 .rating-thanks {
 	display: none;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.3rem;
+}
+
+.card-image-thanks {
+	margin: 1rem 0 0;
+}
+
+.rating-selection p {
+	background-color: var(--dark-blue);
+	color: var(--primary);
+	padding: 0.3rem 1.2rem 0.3rem;
+	border-radius: 20px;
+	margin: 0.7rem 0;
+	font-size: 0.85rem;
+}
+
+.card-title-thanks {
+	font-size: 1.7rem;
+	font-weight: var(--fw-700);
+	color: var(--white);
+	margin-bottom: -0.7rem;
+}
+
+.card-text-thanks {
+	font-size: 0.85rem;
+	text-align: center;
+	line-height: 1.7;
+	margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -142,5 +172,5 @@ input[type="radio"][name="rating"]:checked + label {
 	text-align: center;
 }
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: var(--primary);
 }
