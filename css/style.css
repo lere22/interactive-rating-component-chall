@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+	/* Colors */
+	--primary: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--light-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(216, 12%, 54%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--medium-dark-blue: hsl(215, 24%, 10%);
+	--very-dark-blue: hsl(216, 12%, 8%);
+
+	/* Typography */
+	--font-family-overpass: "Overpass", sans-serif;
+	--fw-400: 400;
+	--fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+html {
+	font-size: 0.9375rem;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--font-family-overpass);
+	background-color: var(--very-dark-blue);
+	color: var(--light-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+input[type="radio"][name="rating"] {
+	display: none;
+}
+
+input[type="radio"][name="rating"]:checked + label {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.circle {
+	background-color: var(--dark-blue);
+	width: 3rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	margin: auto;
+	padding: 2rem;
+	width: 90%;
+	max-width: 27rem;
+	background: radial-gradient(circle at top, var(--dark-blue) 0%, var(--medium-dark-blue) 100%);
+	border-radius: 26px;
+}
+
+/* Rating state */
+.rating-start {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.star-icon {
+	margin-bottom: 2rem;
+}
+
+.card-body h1 {
+	font-size: 1.7rem;
+	font-weight: var(--fw-700);
+	color: var(--white);
+	margin-bottom: 0.5rem;
+}
+
+.card-body p {
+	font-size: 0.85rem;
+	font-weight: var(--fw-400);
+	line-height: 1.7;
+	margin-bottom: 1.5rem;
+}
+
+.rating-buttons {
+	margin-bottom: 1.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.rating-number:hover {
+	background-color: var(--light-grey);
+	color: var(--white);
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.btn {
+	background-color: var(--primary);
+	color: var(--white);
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: var(--fw-700);
+	letter-spacing: 0.1rem;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: var(--white);
+	color: var(--primary);
+	transition-duration: 300ms;
+}
+
+.btn-submit {
+	width: 100%;
+	padding: 0.9rem 0rem 0.9rem;
+	border-radius: 50px;
+}
+
+/* Thank you state */
+.rating-thanks {
+	display: none;
+}
+
+/* Footer */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
